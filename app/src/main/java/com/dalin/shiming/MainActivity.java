@@ -65,7 +65,7 @@ public class MainActivity extends FragmentActivity {
                     break;
             }
 
-            //根据位置得到对应的Fragment
+            //根据位置111122
             BaseFragment to = getFragment();
             //替换
             switchFrament(mContent,to);
