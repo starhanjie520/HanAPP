@@ -26,7 +26,7 @@ public class MainActivity extends FragmentActivity {
         initView();
         initFragment();
         setListener();
-    }
+    } 
     private void initView() {
         setContentView(R.layout.activity_main);
         mRg_main = (RadioGroup) findViewById(R.id.rg_main);
