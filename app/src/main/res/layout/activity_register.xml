@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/register_tv_telephonenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전화: "
+            android:textSize="20sp"/>
+        <Spinner android:id="@+id/Spinner01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="한국"
+            ></Spinner>
+        <EditText
+            android:id="@+id/register_et_telephonenumber"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="01053869009"
+            android:hint="010********"
+            android:singleLine="true"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/register_et_sms"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:hint="1234"
+            android:singleLine="true"/>
+        <Button
+            android:id="@+id/register_btn_sms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="인증번호"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/register_tv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비번 :         "
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/register_et_password"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="1234"
+            android:hint="비번"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/register_tv_password2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비번 확인 :"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/register_et_password2"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="1234"
+            android:hint="비번확인"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/register_tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이름(실명) :"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/register_et_username"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="韩杰"
+            android:hint="홍길동"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/register_tv_idcardnunber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="신분증 번호 :"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/register_et_idcardnunber"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="222402199008241019"
+            android:hint="실명 인증"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <Button
+            android:id="@+id/register_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가입"/>
+        <Button
+            android:id="@+id/register_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="취소"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

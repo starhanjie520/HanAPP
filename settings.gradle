@@ -1,0 +1,2 @@
+include ':app', ':faceplatform', ':faceplatform-ui'
+rootProject.name='HanAPP'

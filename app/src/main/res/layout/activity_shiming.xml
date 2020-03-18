@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/shiming_tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이름 :               "
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/shiming_et_username"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:hint="id"
+            android:text="韩杰"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/shiming_tv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="신분증 번호 :  "
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/shiming_et_password"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:hint="pw"
+            android:text="222402199008241019"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <Button
+            android:id="@+id/shiming_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가입"/>
+        <Button
+            android:id="@+id/shiming_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="취소"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.dalin.shiming"
+        minSdkVersion 24
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    signingConfigs {
+
+
+
+        def alias = "key0"
+        def password = "hanjiasdf"
+        def filePath = "test.jks"  //签名文件路径 如：../faceprint.jks
+
+        debug {
+            keyAlias alias
+            keyPassword password
+            storeFile file(filePath)
+            storePassword(password)
+        }
+        release {
+            keyAlias alias
+            keyPassword password
+            storeFile file(filePath)
+            storePassword(password)
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.navigation:navigation-fragment:2.0.0'
+    implementation 'androidx.navigation:navigation-ui:2.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    implementation 'com.squareup.okhttp3:okhttp:3.4.2'
+    compile project(path:':faceplatform-ui')
+    compile files('libs/javaSDK-2.2.jar')
+    compile files('json-simple-1.1.1.jar')
+    implementation 'org.jetbrains:annotations-java5:15.0'
+}
