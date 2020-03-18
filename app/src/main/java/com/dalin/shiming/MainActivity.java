@@ -36,7 +36,7 @@ public class MainActivity extends FragmentActivity {
         mBaseFragment.add(new CustomFragment1());
         mBaseFragment.add(new CustomFragment2());
         mBaseFragment.add(new CustomFragment3());
-        mBaseFragment.add(new CustomFragment4()); 
+        mBaseFragment.add(new CustomFragment4());
     }
     private void setListener() {
         mRg_main.setOnCheckedChangeListener(new MyOnCheckedChangeListener());
