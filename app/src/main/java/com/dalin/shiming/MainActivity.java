@@ -26,7 +26,7 @@ public class MainActivity extends FragmentActivity {
         initView();
         initFragment();
         setListener();
-    }
+}
     private void initView() {
         setContentView(R.layout.activity_main);
         mRg_main = (RadioGroup) findViewById(R.id.rg_main);
@@ -40,7 +40,7 @@ public class MainActivity extends FragmentActivity {
     }
     private void setListener() {
         mRg_main.setOnCheckedChangeListener(new MyOnCheckedChangeListener());
-        //设置默认选中常用框架
+        //设置默认选中常用框架11
         mRg_main.check(R.id.rb_common_frame);
     }
     class MyOnCheckedChangeListener implements RadioGroup.OnCheckedChangeListener {
