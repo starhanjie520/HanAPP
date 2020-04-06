@@ -37,7 +37,6 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
-        Log.d("ffffffffffff","ddddddddddddddd");
         api = WXAPIFactory.createWXAPI(this, Config.appid,true);
         Intent intent = getIntent();
         api.handleIntent(intent, this);

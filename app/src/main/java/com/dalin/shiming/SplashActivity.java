@@ -1,5 +1,6 @@
 package com.dalin.shiming;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -11,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Handler;
+import android.os.SystemClock;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -26,28 +29,51 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        login_sp = getSharedPreferences("userInfo", 0);
-        et_username=login_sp.getString("et_username", "");
-        et_password =login_sp.getString("et_password", "");
-       // final boolean AutoLogin =login_sp.getBoolean("mRememberCheck", false);
+//        SharedPreferences pref = getSharedPreferences("userInfo", MODE_PRIVATE);
+//        SharedPreferences.Editor editor = pref.edit();
+//        editor.putString("telephonenumber", "01053869009");
+//        editor.commit();
 
 
-        handler.postDelayed(new Runnable() {
+        SharedPreferences login_sp = getSharedPreferences("userInfo", 0);
+        String telephonenumber=login_sp.getString("telephonenumber", "");
+        final String webchatopenid=login_sp.getString("webchatopenid", "");
+        Log.d("webchatopenid : -===---  ",webchatopenid);
+
+        new Thread(){
             @Override
             public void run() {
-                if(et_username.trim().equals("")||et_password.trim().equals("")){
-                    startMainActviity();
+                super.run();
+                Log.d("33333  ","ㄴ11111111111ㅇ");
+            //    SystemClock.sleep(1000);
+                if(webchatopenid.equals("")){   // 설정 파일이 있을경우
+                    Log.d("webchatopenid=====  exist----  ",webchatopenid);
+                    //startMainActviity();
+
                 }else {
-                    if(IdPwCheck()){
-                        Intent intent = new Intent(SplashActivity.this,MainActivity.class);
-                        startActivity(intent);
-                        finish();
-                    }else {
-                        finish();
-                    }
+                    Log.d("webchatopenid : ----not  exist----  ",webchatopenid);
+//                    Intent intent = new Intent(SplashActivity.this,LoginActivity.class);
+//                    startActivity(intent);
+//                    finish();
                 }
             }
-        }, 200);
+        }.start();
+//        handler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                if(et_username.trim().equals("")||et_password.trim().equals("")){
+//                    startMainActviity();
+//                }else {
+//                    if(IdPwCheck()){
+//                        Intent intent = new Intent(SplashActivity.this,MainActivity.class);
+//                        startActivity(intent);
+//                        finish();
+//                    }else {
+//                        finish();
+//                    }
+//                }
+//            }
+//        }, 200);
     }
 
 
@@ -60,13 +86,13 @@ public class SplashActivity extends AppCompatActivity {
     private void startMainActviity() {
         if(!isStartMain){
             isStartMain = true;
-            Intent intent = new Intent(SplashActivity.this,MainActivity.class);
+            Intent intent = new Intent(SplashActivity.this,LoginActivity.class);
             startActivity(intent);
             finish();
         }
     }
     public boolean onTouchEvent(MotionEvent event) {
-        startMainActviity();
+      //  startMainActviity();
         return super.onTouchEvent(event);
     }
     @Override

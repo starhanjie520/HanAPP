@@ -32,7 +32,7 @@ public class WebChatLoginActivity extends AppCompatActivity {
     private Button register_btn;
     private Button register_cancel_btn;
     private Button register_btn_sms;
-    public static String policyverity = "1";
+    public static String policyverity = "0";
     public static String verifyCode = "0000";
     private static final int SHOW_TEXT = 5;
     private Spinner spinner;
@@ -94,15 +94,13 @@ public class WebChatLoginActivity extends AppCompatActivity {
     }
     class SpinnerSelectedListener implements AdapterView.OnItemSelectedListener {
 
-        public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
-                                   long arg3) {
+        public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,long arg3) {
             Log.d("region : ",m[arg2]);
             if(m[arg2].equals("한국")){
                 country = "KR";
             }else {
                 country = "CN";
             }
-
         }
 
         public void onNothingSelected(AdapterView<?> arg0) {
@@ -165,6 +163,7 @@ public class WebChatLoginActivity extends AppCompatActivity {
 
     public void Register() {
         if (isUserNameAndPwdValid()) {
+            policyverity = "1";   //test
             if (policyverity.equals("1")) {           //실명 인증  한번 실행 후
                 RegisterToServer();
             } else {

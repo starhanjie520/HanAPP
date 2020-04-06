@@ -27,8 +27,8 @@ public class Config {
 
     //======== PHP Server
 
-    public static final String mobile_register = "http://test01.hanjie2020.xyz/mobile_register.php";
-    public static final String mobile_webchat_register = "http://test01.hanjie2020.xyz/mobile_webchat_register.php";
-    public static final String mobile_login = "http://test01.hanjie2020.xyz/mobile_login.php";
+    public static final String mobile_register = "http://hanjie2020.xyz/mobile_register.php";
+    public static final String mobile_webchat_register = "http://hanjie2020.xyz/mobile_webchat_register.php";
+    public static final String mobile_login = "http://hanjie2020.xyz/mobile_login.php";
 
 }
